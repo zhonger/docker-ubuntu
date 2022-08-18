@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  ubuntu:
+    image: zhonger/ubuntu:latest
+    # image: zhonger/ubuntu:base-jammy
+    container_name: dev
+    stdin_open: true
+    tty: true
+    volumes:
+     - /etc/localtime:/etc/localtime
+    restart: always

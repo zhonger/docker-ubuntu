@@ -1,13 +1,13 @@
 version: "3"
-services:
 
-  conquest:
-    image: zhonger/ubuntu:latest
+services:
+  ubuntu:
+    image: zhonger/ubuntu:ssh-focal
     container_name: dev
     environment:
      - GITHUB_NAME=zhonger
     stdin_open: true
     tty: true
     volumes:
-     - ~/web/test:/home/ubuntu/test
+     - /etc/localtime:/etc/localtime
     restart: always
