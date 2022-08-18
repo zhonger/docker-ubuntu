@@ -1,4 +1,4 @@
-name: ci
+name: ssh-jammy
 
 on:
   push:

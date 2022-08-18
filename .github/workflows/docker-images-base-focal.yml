@@ -1,4 +1,4 @@
-name: ci
+name: base-focal
 
 on:
   push:

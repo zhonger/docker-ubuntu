@@ -1,4 +1,4 @@
-name: ci
+name: advance-jammy
 
 on:
   push:
