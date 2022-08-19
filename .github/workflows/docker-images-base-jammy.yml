@@ -61,19 +61,19 @@ jobs:
           push: true
           build-args: |
             APP_NAME=${{ env.APP_NAME }}
-            APP_VERSION=base-jammy-${{ env.APP_VERSION }}
+            APP_VERSION=${{ env.APP_VERSION }}
           tags: |
             ${{ env.DOCKERHUB_REPO }}:latest
             ${{ env.DOCKERHUB_REPO }}:base
             ${{ env.DOCKERHUB_REPO }}:base-jammy
-            ${{ env.DOCKERHUB_REPO }}:${{ env.APP_VERSION }}
+            ${{ env.DOCKERHUB_REPO }}:base-jammy-${{ env.APP_VERSION }}
             quay.io/${{ env.DOCKERHUB_REPO }}:latest
             quay.io/${{ env.DOCKERHUB_REPO }}:base
             quay.io/${{ env.DOCKERHUB_REPO }}:base-jammy
             quay.io/${{ env.DOCKERHUB_REPO }}:jammy
-            quay.io/${{ env.DOCKERHUB_REPO }}:${{ env.APP_VERSION }}
+            quay.io/${{ env.DOCKERHUB_REPO }}:base-jammy-${{ env.APP_VERSION }}
             registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:latest
             registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:base
             registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:base-jammy
             registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:jammy
-            registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:${{ env.APP_VERSION }}
+            registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:base-jammy-${{ env.APP_VERSION }}

@@ -4,7 +4,7 @@ LABEL maintainer="zhonger zhonger@live.cn"
 
 # APT updates
 RUN apt-get update && apt-get upgrade -y \
-                   && apt-get install -y apt-transport-https ca-certificates
+                   && apt-get install -y apt-transport-https ca-certificates htop
 
 # Create a no-passowrd sudo user
 RUN apt-get update && apt-get install -y sudo \

@@ -61,11 +61,11 @@ jobs:
           push: true
           build-args: |
             APP_NAME=${{ env.APP_NAME }}
-            APP_VERSION=advance-focal-${{ env.APP_VERSION }}
+            APP_VERSION=${{ env.APP_VERSION }}
           tags: |
-            ${{ env.DOCKERHUB_REPO }}:${{ env.APP_VERSION }}
+            ${{ env.DOCKERHUB_REPO }}:advance-focal-${{ env.APP_VERSION }}
             ${{ env.DOCKERHUB_REPO }}:advance-focal
-            quay.io/${{ env.DOCKERHUB_REPO }}:${{ env.APP_VERSION }}
+            quay.io/${{ env.DOCKERHUB_REPO }}:advance-focal-${{ env.APP_VERSION }}
             quay.io/${{ env.DOCKERHUB_REPO }}:advance-focal
-            registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:${{ env.APP_VERSION }}
+            registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:advance-focal-${{ env.APP_VERSION }}
             registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:advance-focal
