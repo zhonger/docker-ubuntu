@@ -24,8 +24,8 @@ RUN sudo apt-get install -y git zsh \
     && sed -i "s/plugins=(git/plugins=(git conda/" ~/.zshrc \
     && sudo usermod -s /bin/zsh ubuntu \
     && mkdir -p ~/.oh-my-zsh/plugins/conda
-COPY ../conda.plugin.zsh /home/ubuntu/.oh-my-zsh/plugins/conda/conda.plugin.zsh
-COPY ../bira.zsh-theme /home/ubuntu/.oh-my-zsh/themes/bira.zsh-theme
+COPY conda.plugin.zsh /home/ubuntu/.oh-my-zsh/plugins/conda/conda.plugin.zsh
+COPY bira.zsh-theme /home/ubuntu/.oh-my-zsh/themes/bira.zsh-theme
 
 # Fix zsh locale
 RUN sudo apt-get install -y locales \
