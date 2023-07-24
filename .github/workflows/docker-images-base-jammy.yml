@@ -49,7 +49,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./base-jammy
+          context: .
           file: ./base-jammy/Dockerfile
           platforms: |
             linux/amd64

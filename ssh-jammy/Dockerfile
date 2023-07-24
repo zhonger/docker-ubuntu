@@ -3,13 +3,15 @@ FROM ubuntu:jammy
 LABEL maintainer="zhonger zhonger@live.cn"
 
 # APT updates
-RUN apt-get update && apt-get upgrade -y \
-                   && apt-get install -y apt-transport-https ca-certificates htop
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y apt-transport-https ca-certificates htop
 
 # Create a no-passowrd sudo user
-RUN apt-get update && apt-get install -y sudo \
-                   && useradd -m ubuntu -s /bin/bash && adduser ubuntu sudo \
-                   && echo "ubuntu ALL=(ALL) NOPASSWD : ALL" | tee /etc/sudoers.d/nopasswd4sudo
+RUN apt-get update \
+    && apt-get install -y sudo \
+    && useradd -m ubuntu -s /bin/bash && adduser ubuntu sudo \
+    && echo "ubuntu ALL=(ALL) NOPASSWD : ALL" | tee /etc/sudoers.d/nopasswd4sudo
 
 USER ubuntu
 WORKDIR /home/ubuntu

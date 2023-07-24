@@ -49,7 +49,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./base-focal
+          context: .
           file: ./base-focal/Dockerfile
           platforms: |
             linux/amd64
