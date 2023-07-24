@@ -19,7 +19,11 @@ RUN sudo apt-get install -y git zsh \
     && git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh \
     && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc \
     && sed -i "s/robbyrussell/bira/" ~/.zshrc \
-    && sudo usermod -s /bin/zsh ubuntu
+    && sed -i "s/plugins=(git/plugins=(git conda/" ~/.zshrc \
+    && sudo usermod -s /bin/zsh ubuntu \
+    && mkdir -p ~/.oh-my-zsh/plugins/conda
+COPY ../conda.plugin.zsh /home/ubuntu/.oh-my-zsh/plugins/conda/conda.plugin.zsh
+COPY ../bira.zsh-theme /home/ubuntu/.oh-my-zsh/themes/bira.zsh-theme
 
 # Fix zsh locale
 RUN sudo apt-get install -y locales \
