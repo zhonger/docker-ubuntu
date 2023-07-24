@@ -41,6 +41,6 @@ RUN sudo apt-get autoremove -y \
 # Remove sudo for ubuntu
 RUN sudo rm /etc/sudoers.d/nopasswd4sudo
 
-ADD entrypoint.sh /entrypoint.sh
+ADD ./base-focal/entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
