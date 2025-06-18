@@ -64,10 +64,7 @@ jobs:
           tags: |
             ${{ env.DOCKERHUB_REPO }}:ssh-jammy-${{ env.APP_VERSION }}
             ${{ env.DOCKERHUB_REPO }}:ssh-jammy
-            ${{ env.DOCKERHUB_REPO }}:ssh
             quay.io/${{ env.DOCKERHUB_REPO }}:ssh-jammy-${{ env.APP_VERSION }}
             quay.io/${{ env.DOCKERHUB_REPO }}:ssh-jammy
-            quay.io/${{ env.DOCKERHUB_REPO }}:ssh
             registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:ssh-jammy-${{ env.APP_VERSION }}
             registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:ssh-jammy
-            registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:ssh

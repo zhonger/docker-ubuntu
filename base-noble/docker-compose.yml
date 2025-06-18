@@ -2,7 +2,8 @@ version: "3"
 
 services:
   ubuntu:
-    image: zhonger/ubuntu:base-jammy
+    image: zhonger/ubuntu:latest
+    # image: zhonger/ubuntu:base-noble
     container_name: dev
     stdin_open: true
     tty: true

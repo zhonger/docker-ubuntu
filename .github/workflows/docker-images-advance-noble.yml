@@ -1,4 +1,4 @@
-name: base-jammy
+name: advance-noble
 
 on:
   push:
@@ -50,7 +50,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: ./base-jammy/Dockerfile
+          file: ./advance-noble/Dockerfile
           platforms: |
             linux/amd64
             linux/arm/v7
@@ -62,11 +62,12 @@ jobs:
             APP_NAME=${{ env.APP_NAME }}
             APP_VERSION=${{ env.APP_VERSION }}
           tags: |
-            ${{ env.DOCKERHUB_REPO }}:base-jammy
-            ${{ env.DOCKERHUB_REPO }}:base-jammy-${{ env.APP_VERSION }}
-            quay.io/${{ env.DOCKERHUB_REPO }}:base-jammy
-            quay.io/${{ env.DOCKERHUB_REPO }}:jammy
-            quay.io/${{ env.DOCKERHUB_REPO }}:base-jammy-${{ env.APP_VERSION }}
-            registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:base-jammy
-            registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:jammy
-            registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:base-jammy-${{ env.APP_VERSION }}
+            ${{ env.DOCKERHUB_REPO }}:advance-noble-${{ env.APP_VERSION }}
+            ${{ env.DOCKERHUB_REPO }}:advance-noble
+            ${{ env.DOCKERHUB_REPO }}:advance
+            quay.io/${{ env.DOCKERHUB_REPO }}:advance-noble-${{ env.APP_VERSION }}
+            quay.io/${{ env.DOCKERHUB_REPO }}:advance-noble
+            quay.io/${{ env.DOCKERHUB_REPO }}:advance
+            registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:advance-noble-${{ env.APP_VERSION }}
+            registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:advance-noble
+            registry.cn-shanghai.aliyuncs.com/${{ env.DOCKERHUB_REPO }}:advance

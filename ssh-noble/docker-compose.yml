@@ -1,9 +1,11 @@
 version: "3"
 
 services:
-  ubuntu:
-    image: zhonger/ubuntu:base-jammy
+  cubuntu:
+    image: zhonger/ubuntu:ssh-noble
     container_name: dev
+    environment:
+     - GITHUB_NAME=zhonger
     stdin_open: true
     tty: true
     volumes:

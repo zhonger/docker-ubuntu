@@ -18,6 +18,7 @@ In order to use it more easily, we uploaded the image to three independent image
   - base: including `ubuntu` user, git, htop, zsh; without `sudo` mode.
   - advance: including `sudo` mode and other base features.
   - ssh: including `ssh`, `ssh-import-id` and other advance features.
+- Three release versions are supported: `noble`, `jammy` and `focal`.
 
 ## How to use it
 
@@ -68,6 +69,7 @@ If you want to know more about the idea and details, you can refer to [《Docker
   - base: 新增 `ubuntu` 用户、git、htop 和 zsh; 没有 `sudo` 权限。
   - advance: 在 base 的基础上新增 `sudo` 权限。
   - ssh: 在 advance 的基础上新增 `ssh` 和 `ssh-import-id` 工具。
+- 支持三种发行版：`noble`，`jammy` 和 `focal`。
 
 ## 如何使用
 
